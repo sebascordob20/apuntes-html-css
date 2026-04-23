@@ -1,0 +1,29 @@
+body{
+    margin: 0;
+}
+
+.contenedor {
+    padding: 50px;
+    background-color: darkgray;
+    position: relative;
+}
+
+.box{
+    width: 100px;
+    height: 100px;
+    left:0;
+    bottom: 0;
+    background-color:  forestgreen;
+    position: fixed;
+}
+
+
+.box__fixed {
+    width: 200px;
+    height: 60px;
+    background-color: darkmagenta;
+    position: sticky;
+    top: 20px;
+    z-index: 40;
+    box-sizing: border-box;
+}

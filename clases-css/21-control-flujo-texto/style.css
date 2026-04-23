@@ -1,0 +1,53 @@
+body {
+    background-color: gray;
+}
+
+
+.box {
+    width: 220px;
+    height: 220px;
+    background-color: #fff;
+    margin: auto;
+    margin-bottom: auto;
+
+    /*
+    La propiedad white-space define como se comportan los espacios en blanco.
+    */
+    white-space: normal; /* Le indica a la caja que si un texto no cabe a lo largo del contenedor, entonces haga un salto de linea*/
+
+    white-space: nowrap; /* El valor nowrap de la propiedad white-space, evita el salto de linea automatico. */
+
+    white-space: pre; /* El valor pre, detecta los saltos de linea explícitos que indique el programador.*/
+
+    white-space: pre-wrap; /*Respeta los saltos de linea que da el usuario de forma explícita, y evita que el texto se desborde del contenedor. */    
+}
+
+
+.box-overflow {
+    margin: 0;
+    border: solid 1px black;
+    text-overflow: clip; /* */
+    text-overflow: ellipsis; /* le pone los 3 puntos suspensivos al texto justo atnes de que este se desborde*/
+
+    overflow-wrap:  break-word;
+    overflow-wrap: anywhere; /* rompe o hqce un quiebre con las palabras del texto que son largas*/
+}
+
+
+
+h2 {
+    text-wrap: balance; /*Evita que el texto quede con palabras viudas y huerfanas. Este valor sirve para balancear textos */
+}
+
+
+p {
+    text-wrap: pretty; /* Sirve pára balancear párrafos con mucho mas texto que un texto simple como h1, h2, h3 ...*/
+}
+
+/*En resumen, se aconseja usar estas propiedades para los casos donde nuestro texto se desborda del contenedor:
+
+white-sapce: nowrap
+overflow: hidden;
+text-overflow: ellipsis;
+
+*/

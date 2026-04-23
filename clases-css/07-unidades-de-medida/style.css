@@ -1,0 +1,36 @@
+html {
+    font-size: 15px;
+}
+
+
+body {
+    font-size: 40px;
+
+}
+
+
+div {
+    background: #ededed;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 20px  ;
+    border-left: 5px solid #999;
+    box-sizing: border-box ;
+
+    font-size: 2rem !important; /* Hace referencia a multiplicar por 2 el font-size del componente raiz, html*/
+}
+
+h2 {
+    margin: 0;
+    font-size: 1em !important; /*Hace referencia a la medida font-size de su componente mas padre */
+}
+
+span {
+    color: #999;
+    font-size: 10px;
+    font-weight: 100;
+}
+
+
+p {
+    color: #555;
+}

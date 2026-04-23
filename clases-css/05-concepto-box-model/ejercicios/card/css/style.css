@@ -1,0 +1,36 @@
+body{  
+}
+
+.card{
+    background-color: cornflowerblue;
+    width: 440px ;
+    margin-left: 20%;
+    border-radius: 16px;
+    text-align: center;
+}
+
+
+.card img {
+    width: 100%;
+    border-radius: 16px;
+    border-top: solid 1px black;
+    border-left: solid 1px black;
+    border-right: solid 1px black;
+    border-bottom: none;
+}
+
+.card-title {
+border-top: none;
+ text-align: center;
+}
+
+.card-subtitle{
+text-align: center
+}
+
+.card-content {
+    /*background-color: rgb(202, 49, 113); */
+tex-aling: center;
+border-radius: 16px;
+overflow: hidden;
+}

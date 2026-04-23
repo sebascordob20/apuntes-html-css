@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Accesibilidad web</title>
+</head>
+<body>
+    
+    <!--
+    
+    1 El navegador web interpreta el código html de la página
+      Luego el naveador crea el DOM
+
+    2. Luego, el navegador crea la copia del DOM, que se conoce como 
+        arbol de accesibilidad.
+
+    3. Luego las tecnologias de accesibilidad, lee el arbol de accesibilidad,
+        y el DOM le indica instrucciones.
+    -->
+
+
+    <nav>
+        <ul>
+            <li aria-label="primer item menu"></li>
+        </ul>
+
+        <p>Hola amigos progromadores</p>
+    </nav>
+
+    <h2 aria-label="titulo de la pagina">Titulo de la pagina</h2>
+
+    <img src="../../clases-html/04-imagenes/linux.png" alt="Logo GNU Linux">
+</body>
+</html>

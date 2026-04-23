@@ -1,0 +1,63 @@
+body {
+    margin: 0;
+}
+
+.flexbox{
+display: flex;
+margin: 22px;
+background-color: #FFF;
+/* width: 550px;
+height: 350px; */
+gap: 12px;
+border: solid 1px black;
+}
+
+
+.flex-item {
+    background-color: steelblue;
+    border: solid 1px black;
+    font-size: 45px;
+    text-align: center;
+     width: 100px;
+     order: 2;
+     flex-grow: 1;
+}
+
+
+
+.flex-item:first-child {
+    order: 3;
+    flex-grow: 1;
+}
+
+
+
+/* 
+Esta propiedad define hasta donde se van a encoger los elementos flex-item.
+Entre mayor sea el número del valor flex-shrink, mas se encojerá el elemento flex-item
+
+*/
+
+.flex-item:last-child {
+    order: 1;
+    flex-shrink: 2;
+
+
+    flex-basis: 150px; /* Es el width de los flex item. Establece el tamaño base de un flex item*/
+}
+
+
+
+
+/* 
+Valores por defecto de las propiedades:
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+ 
+También se podrian representar estos valores de estas propiedades, pasandole los valores a la propiedad flex, así:
+
+flex: 1 1 auto; o flex: 0 1 450px; 
+
+
+*/

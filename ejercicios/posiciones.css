@@ -1,0 +1,42 @@
+div {
+    background-color: aqua;
+    height: 200px;
+}
+
+.posicion-estatica {
+position: static;
+width: 30%;
+margin-left: 60px;
+}
+
+
+.posicion-fija {
+position: fixed;
+margin-top: 80px;
+/* width: 30%; */
+margin-left: 60px;
+background-color: blueviolet;
+
+}
+
+.posicion-absoulta{
+    position: absolute;
+    margin-top: 50px;
+    background-color: coral;
+    margin-left: 45%;
+}
+
+
+
+.posicion-relativa {
+background-color: crimson;
+}
+
+.btn-absoluto {
+    height: 60%;
+}
+
+.posicion-sticky {
+
+}
+

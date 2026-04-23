@@ -1,0 +1,29 @@
+/* En la especificidad, el orden de los selectores definidios si imorta*/
+
+
+/* 
+Niveles de prioridad cascasda en CSS:
+1 - Estilos del navegador por defecto.
+2 - Estilos creados por el usuario mismo en un archivo .css he importado con un <link rel='stylesheet' href = 'style.css'>
+3 - Estilos creados en una etiqueta <style> </style>
+5- Estilos por selector clase.
+6. Estilos por selector ID.
+4- Estilos inline o en linea. Ejemplo: <div style="color: yellow; text-decoration: "underline"> <p> Aqui aplicaremos estilos en linea </p> </div>
+5 - la que mayor prioridad tiene para css es el !important, ejemplo: p {text-align: center !important;}
+*/
+
+
+#titulo {
+    color:blueviolet;
+}
+
+
+ .titulo {
+    color: aqua;
+}
+
+
+
+ h1 {
+    color: red !important;
+}

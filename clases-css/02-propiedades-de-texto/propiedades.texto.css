@@ -1,0 +1,29 @@
+p{
+   color: red;
+   font-family: Georgia, 'Times New Roman', Times, serif;
+   font-size: 13px;
+
+   /*Las tipografías definen 9 pesos diferentes para una misma tipografía. Esos pesos van desde 100 hasta 900 */
+   font-weight: 500;
+
+   /* Escribir font-weight: 700 o escribir font-weight: bold es lo mismo
+
+
+      El valor bolder lo que hace es asignarle el peso siguiente que tiene la fuente. Por ejemplo
+      si la fuente por defecto tiene un peso de 400, cuando le asignemos font-weight: bolder al selector, 
+      el peso de la fuente ahora será 500. Si el peso por defecto es 600, con font-weight: bolder será de 700
+   */
+
+
+   /* Propieda font-style */
+
+   font-style: italic;
+   text-align: start;
+   text-decoration: solid;
+   line-height: 1.3;
+   letter-spacing: 1px;
+   text-transform: capitalize;
+   /* word-wrap: break-word; */
+    word-break: break-all;
+
+}

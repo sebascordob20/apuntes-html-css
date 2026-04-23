@@ -1,0 +1,165 @@
+
+
+/* Cuando el usuario pasa el mouse sobre el elemento*/
+h1:hover {
+    background-color: blueviolet;
+}
+
+
+
+/* cuando el usuario da clic sobre el elemento */
+li:active{
+    text-decoration: underline;
+    background-color: cornflowerblue;
+}
+
+
+/*Aplicando estilos al primer elemento li que encuentre */
+li:first-child {
+    background-color: crimson;
+}
+
+
+
+/*Aplicando estilos al ultimo elemento li que encuentre */
+li:last-child {
+    background-color: teal;
+    
+} 
+
+
+
+/*Aplicando estilos al segundo elemento li que encuentre */
+
+li:nth-child(2) {
+
+    background-color: blue;
+}
+
+
+/* aplicando la misma función pero para el elemento li 5 de mi documento html */
+
+li:nth-child(5) {
+    background-color: blue;
+}
+
+/* Aplicando estilos cada x elementos con nth-child*. 
+
+    En el siguiente ejemplo, aplicaremos un margin a cada elemento li de nuestro documento html.
+*/
+
+li:nth-child(1n) {
+    margin: 10px 25px;
+}
+
+
+
+/* Cada 2 elementos li, le aplicaremos estilos solo a 1*/
+li:nth-child(2n) {
+    margin: 10px 25px;
+}
+
+
+
+/* Cada 3 elementos li, le aplicaremos estilos solo a 1*/
+li:nth-child(3n) {
+    margin: 10px 30px;
+}
+
+
+
+/* Tenemos un caso especial. */
+
+li:nth-child(3) {
+    /*  font-size: 45px; */
+}
+
+/* 
+Hace lo mismo que: 
+*/
+
+li:nth-of-type(2){
+    font-size: 45px;
+}
+
+
+/* Ya que en mi lista actual, hay un elemeneto paragrahp entre el primer y tercer elemento de la lista.
+    En este caso, la pseudo-clase nth-child, no distingue entre el tipo del selector que tiene, el cuenta como hijo  todos los elementos qu esten al mismo nivel de los li
+/* 
+Mientras que la pseudo clase nth-of-type(2), aplicará el estilo al segundo elemento li que encuentre en el documento, sin tomar en cuenta
+los elementos de otro tipo que esten al mismo nivel antes que el, es decir que sean sus hermanos pero que no sean un li.
+*/
+
+
+
+
+/* Aplicando un estilo o varios estilos a todos los elementos li que no tengan la clase excluir */
+
+li:nth-of-type:not(.excluir){
+     
+}
+
+
+
+/* Seleccionando un div que esté vacio, así <div></div>*/
+
+div:empty{
+border-color: red;
+
+}
+
+
+
+input[type='checkbox']{
+    margin: 50px;
+}
+
+
+input[type='checkbox']:checked {
+    margin: 0 ;
+}
+
+
+/* Enlace no visitado*/
+a:link {
+    background-color: aqua;
+}
+
+a:visited {
+    background-color: darkslategray;
+}
+
+
+
+/*Seleccionando inputs validos */
+input:valid {
+    color: green;
+}
+
+
+
+/* Seleccionando inputs invalidos */
+
+input:invalid {
+    color: red;
+}
+
+
+
+/* Agrupar elementos y aplicarles un selector con la pseudo clase is */
+
+ul:is(li){
+    background-color: aqua;
+}
+
+
+/* 
+pseudo clase has
+Aquí estamos modificando el elemento ul, que despues de el, le sigue un div
+*/
+
+
+ul:has(+div){
+
+
+}

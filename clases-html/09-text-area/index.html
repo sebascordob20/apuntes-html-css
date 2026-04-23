@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Text area</title>
+</head>
+<body>
+    
+ 
+        
+    <form>
+
+           <h2>Mi formulario  de contacto</h2>
+
+    <fieldset>
+        <legend>Información básica</legend>   
+        <div class="form_input">
+            <label for="nombre">Nombre completo</label>
+            <input type="text" id="nombre" placeholder="nombre" name="nombre" id="nombre">
+        </div>
+
+        <div class="form_input">
+            <label for="email">Email</label>
+            <input type="text" placeholder="email" name="email" id="email">
+        </div>
+
+
+        
+        <div class="form_input">
+            <label for="asunto">Asunto</label>
+            <input type="text" placeholder="asunto de tu mensaje" name="asunto" id="asunto">
+        </div>
+    </fieldset>
+
+
+        <!--select-->
+        <div class="form_input">
+            <label for="type-of-user" >Tipo de usuario
+            <datalist name="type-of-user" id="type-of-user">
+                <option value="user1">Seguidor/a</option>
+                <option value="user2">Empresa</option>
+                <option value="user3">Otros</option>
+        </select>
+        </label>
+        </div>
+
+
+        <!--datalist-->
+        <div class="form_input">
+            <label for="referente">referente
+                
+                <input list="referente" name="referente">
+
+            <datalist name="type-of-user" id="referente" aria-label="selecciona que tipo de usuario eres" role="list">
+                <option value="Soy Dalto">Un creador de contenido</option>
+                <option value="Sebastian Ibarguen">Yb desarrallador backend con laravel y php</option>
+                <option value="sibarguen21">Un Ethical hacker y CTF Player</option>
+            </datalist>
+        </div>
+
+        <div class="form_input">
+            <label for="mensaje">Mensaje</label>
+             <!--Para los textarea. si utliziamos readonly el focus sigue funcionando,  y si enviamos la data del form, el contenido también se envía.
+                Si usamos disabled, no vamos a poder tener el focus ni enviar la data que este por defecto en el textarea.
+                
+                
+                La propiedad rows, define la cantiad de lineas máximas de texto que puede escribir el usuario en el textarea. Cuando se usa este atributo
+                hay que tener en cuenta el min-height y height que le pueda definir al textarea con css.
+             -->
+            <textarea rows="8" id="mensaje" name="mensaje" placeholder="Deja tu técnica de hacking web mas utilizada acá"></textarea>
+        </div>
+
+        <div class="form_input">
+            <label for="terms-cond">Acepto términos y condiciones</label>
+            <input id="terms-cond" name="terms-cond" type="checkbox">
+        </div>
+    </form>
+</body>
+</html>

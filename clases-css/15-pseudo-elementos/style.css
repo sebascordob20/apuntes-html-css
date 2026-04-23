@@ -1,0 +1,36 @@
+h1::first-letter{
+    font-size: 68px;
+}
+
+p::first-line{
+    color: blue;
+}
+
+
+div::selection{
+    background-color: blueviolet;
+    color: #fff;
+}
+
+
+input::placeholder {
+    color: springgreen;
+    background-color: black ;
+}
+
+li::marker{
+    color: tomato;
+}
+
+
+
+div::before{
+    content: 'Sebastian';
+    color: crimson;
+}
+
+
+div::after {
+    content: 'sibarguen21';
+    background-color: teal;
+}

@@ -1,0 +1,13 @@
+
+body{
+    margin: 0;
+    background-color: purple;
+}
+
+.header {
+    width: 100vh;
+    box-sizing: border-box;
+    color: white;
+
+    background-image: url();
+}

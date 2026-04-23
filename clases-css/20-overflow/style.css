@@ -1,0 +1,23 @@
+/*
+Esta propiedad se encarga de manejar el desbordamiento, es decir,
+el  contenido que sobresale de su contenedor 
+*/
+
+
+body{
+    margin: 0;
+    background-color: #ccc;
+}
+
+
+.box{
+
+    position: relative;
+    margin: auto;
+    margin-top: 30px;
+    width: 220px;
+    height: 220px;
+    background-color: steelblue;
+    border: 1px solid black;
+    overflow: hidden ;
+}

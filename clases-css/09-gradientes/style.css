@@ -1,0 +1,38 @@
+body{
+    background-color: red;
+}
+
+/* gradiente linear*/
+.box {
+    width: 500px;
+    height: 500px;
+    background: linear-gradient(transparent, #000a);
+    margin: 0;
+    margin: 50vh;
+    border-radius: 10px;
+}
+
+.linear-gradiente-top {
+    width: 500px;
+    height: 500px;
+    background: linear-gradient(to top, transparent, #000a);
+    margin: 0;
+    margin: 50vh;
+    border-radius: 10px;
+}
+
+
+.radial-gradiente {
+
+       width: 500px;
+    height: 500px;
+    background: radial-gradient(transparent, #000a);
+    margin: 0;
+    margin: 50vh;
+    border-radius: 10px;
+}
+
+h1 {
+color: white;
+text-align: center;
+}

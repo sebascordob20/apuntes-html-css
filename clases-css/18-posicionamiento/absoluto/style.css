@@ -1,0 +1,31 @@
+
+.contenedor {
+    margin: 20px 40px;
+    border: 2px solid black;
+    position: relative;
+} 
+
+
+.box {
+    width: 100px; 
+    height: 100px;
+    background-color: orange;
+    color: #fff;
+    position: absolute;
+}
+
+
+.box--blue {
+    background-color: blue;
+    left: 50px;
+    top: 40px;
+    position: absolute;
+}
+
+
+.box--white {
+    background-color: white;
+    color: black;
+    border: solid 1px black;
+    bottom: 10px;
+}

@@ -1,0 +1,27 @@
+body {
+    background-color: grey;
+}
+
+
+/*
+
+object-fit nos permite definir como se va a comportar el contenido de un elemento como imagen, video... cuando le definimos un ancho y un alto
+Estos comportamientos son: adaptarse, ajustarse, estirarse, entre otros...
+*/
+
+img {
+    width: 80%;
+    height: 80%;
+    border-radius: 16px;
+    /*object-fit: fill; */
+    /*object-fit: contain ;*/ /* El valor contain de la propiedad object-fit hace lo mismo que una imgaen con la propiedad background-image, es
+     decir, hace que la imagen entre almenos 1 vez en la resolución que le dimos y que, algunas de las 2 resoluciones x o y, esten tomando el 100%
+    */
+    
+
+   /* object-fit: none; */ /*Mantiene la realción original de una imagen. */
+    /* object-fit: scale-down;
+    object-position: 20px 30px; */
+    object-fit: cover;
+    object-position: center;
+}

@@ -1,0 +1,59 @@
+.ingrediente-faltante {
+    color: red;
+}
+
+.ingrediente-comprado {
+    text-decoration: line-through;
+}
+
+
+
+#ingrediente-mas-rico {
+    
+}
+
+
+
+/* Especificidad en selectores*/
+
+img[src="linux.png"] {
+
+}
+
+/*signo  ^   --> inicia con*/
+
+img[src^="linu"]
+
+/*
+signo $ ---> termina con 
+*/
+img[src$="x.png"]
+
+
+
+
+
+/*Selector descendiente */
+
+ul li {
+
+}
+
+
+/* selector hijo directo para estilar una lista desordenada que és hija de un nav.*/
+nav > ul {
+    
+}
+
+
+/* Selector adyacente: Aplicaremos estilos al primer elemento p que este despues de un h1*/
+
+h1 + p {
+
+}
+
+
+/*Selector de hermano general. En este caso le aplicaremos estilos a todos los p que esten despues de un h1 */
+h1 ~  p {
+
+}

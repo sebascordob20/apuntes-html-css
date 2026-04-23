@@ -1,0 +1,41 @@
+body {
+    color: red;
+    
+}
+
+
+div {
+    width: 50%;
+}
+
+
+h1 {
+    width: inherit;
+}
+
+
+/* 
+Reestableciendo el valor de la propiedad, al valor inicial que el navegador web
+le da por defecto.
+*/
+
+h1 {
+    width: initial;
+}
+
+
+
+h1 {width: unset;
+}
+
+
+
+/* 
+revert intenta reiniciar el valor del selector, a los estilos definidos con anterioridad.
+Si no encuentra esos estilod previos definidos, asigna el valor qpor defecto que birnda el
+navegador   
+
+*/
+h1 {
+    width: revert ;
+}

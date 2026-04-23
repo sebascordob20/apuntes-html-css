@@ -1,0 +1,37 @@
+/*
+Bloque: es un componente indepnendiente que no depende de nadie para existir. Ejemplo::
+
+-Una barra de navegación
+-Una card
+-Un formulario
+
+Elemento:  Es un pedazo o parte el bloque, que al sacarlo del bloque, no tendria sentido
+
+Modificador: Es una forma de modificar un bloque o un elemento
+
+*/ 
+
+
+.lista {
+    border: 2px solid black;   
+}
+
+
+
+.lista__ingrediente{
+    margin: 10px 0;
+    color: gray;
+    list-style: square;
+}
+
+
+.lista--vieja  {
+    background-color: darkgoldenrod;
+   
+}
+
+
+.lista--vieja .lista__ingrediente {
+   color: black;
+   
+}

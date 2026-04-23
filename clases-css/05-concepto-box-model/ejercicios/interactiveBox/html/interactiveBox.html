@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/interactiveBox.css">
+    <title>Interactive Box</title>
+</head>
+
+<body>
+    <diV class="indicadores">
+
+        <!-- 
+<label for="file">File progress:</label>
+<progress id="file" max="100" value="70">70%</progress>
+-->
+
+
+        <label for="width">Width:</label>
+        <input class=".input" type="range" id="width" name="width" min="0" max="100" value="0"> <br> <br>
+
+
+        <label for="height">Height:</label>
+        <input type="range" id="height" name="height" min="0" max="100" value="0"> <br> <br>
+
+
+        <label for="padding">Padding:</label>
+        <input type="range" id="padding" name="padding" min="0" max="100" value="0"> <br> <br>
+
+
+        <label for="margin">Margin:</label>
+        <input type="range" id="margin" name="margin" min="0" max="100" value="0"> <br> <br>
+
+        <label for="border-radius">Border-Radius:</label>
+        <input type="range" id="border-radius" name="border-radius" min="0" max="100" value="0"> <br> <br>
+
+        <label for="box-sizing">Box-sizing:</label>
+
+        <select name="select" id="box-sizing" style="margin-left: 5px;">
+            <option value="value1" selected>Content-box</option>
+            <option value="value2">Border-Box</option>
+        </select>
+    </diV>
+
+
+    <p class="contenido">CONTENIDO
+    </p>
+
+
+
+    <script defer src="../js/interaction.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,109 @@
+/* La dispocisión de flexbox es unidireccional, es decir, que va hacia una sola dirección,
+y unidimensional, que se mueve en el eje x, o en el eje y
+*/
+
+
+
+/*  
+valores principales de los atributos para flexbox:
+
+- row ---> ordena los flex items del eje main axis (de forma horizontal), de izquierda a derecha
+- row-reverse ---> ordena los flex items del eje main axis (de forma horizontal), de derecha a izquierda
+
+- column ---> ordena los flex items del eje main axis (de forma vertical), de arriba hacia abajo.
+- column-reverse ---> ordena los flex items del eje main axis (de forma vertical), de abajo hacia arriba.
+
+
+------------------------------------
+align-items: center, start o end
+
+justify-contend: center, start o end
+
+
+
+Propiedad gap: les da un margen consistente a todos los flex items de la flexbox. Ejemplo:
+gap: 12px;
+*/
+
+
+
+
+body {
+    margin: 0;
+}
+
+
+/* 
+Con flexbox, los flex item no pueden agrandarse a su tamaño original por defecto.
+tampoco podemos hacerlos crecer por defecto.
+
+*/
+
+.flexbox {
+    width: 150px;
+    height: 250px;
+
+    display: flex;
+    gap: 12px;
+    flex-direction: column;
+    border: solid 1px black;
+    margin: auto;
+    gap: 12px;
+
+    /* Esta propiedad alinea los items en el eje principal. Recordar que quien define el eje principal
+       es la propiedad flex-direction. 
+
+       justify-content puede tomar estos valores:
+        center:
+        baseline:
+        space-evenly: le da el mismo margen a los lados a los flex-item
+        space-between:
+        space-arround;
+
+
+    */
+    justify-content: center;
+    flex-wrap: wrap;
+    
+    align-items: stretch; /* estira el elemento flex-item para que ocupe todo el ancho del contenedor flex y no queden espacios a los lados*/
+    
+    
+    align-items: center;
+    /*la propiedad flex-flow define el flex-direction y el wrap de mi flexbox*/
+    /*
+    flex-flow: row wrap; 
+    */ 
+
+}   
+
+
+.flex-item {
+    width: 120px;
+    height: 200px;
+    border: solid 1px black;
+    background-color: lime;
+    text-align: center;
+}
+
+
+
+
+/* 
+-------------------------------------------------------
+Para centrar un flex item en su contenedor flexbox padre, debemos darle display: flex,
+al componente padre, y darle un margin: auto, al componente hijo flex item.
+
+Otra forma muy usada para centrar un elemento flex item, es darle justify-content: center; y 
+aling-items: center; al componente padre flexbox.
+*/
+
+.flex-item2 {
+    background-color: darkviolet;
+    margin: auto;
+}
+
+
+
+
+/* La propiedad align-self en un elemento flex-item, solo funciona cuando el contenedor div flexbox padre,
+ usa la propiedad align-items. Align-self se aplica en el flexbox-item*/

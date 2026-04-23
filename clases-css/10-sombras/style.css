@@ -1,0 +1,28 @@
+.box {
+ margin: 20px;
+
+ margin-left: 50vh;
+ width: 400px;
+background-color: blue;
+color: white;
+
+ box-shadow: 20px 20px 50px 10px blue;
+}
+
+
+p {
+    line-height: 2;
+    text-align: center;
+    font-size: 1rem;
+    color: beige;
+    /*El text shadow no utiliza el 4 parametro que corresponde ala expansión, que usa el box-shadow*/
+    text-shadow: 0 0 5px red;
+}
+
+
+img {
+ /*Para imagenes u otro tipo de elementos que no sean ni cajas ni texto, usamos drop-shadow con la función filter para sombras*/
+ width: 150px;
+ border-radius: 15px;
+ filter: drop-shadow(0px 0px 5px yellowgreen);
+}

@@ -1,0 +1,17 @@
+.input {
+    background-color: rgb(25, 144, 241);
+}
+
+.indicadores {
+    background-color: #d2d2d2;
+    border: solid 1px black;
+
+    padding: 20px 30px;
+}
+
+
+.contenido {
+    margin: 0;
+    border: solid 1px black;
+    width: 100px;
+}

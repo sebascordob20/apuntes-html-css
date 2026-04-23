@@ -1,0 +1,56 @@
+body{
+    margin: 0;
+    color: #eee;
+    background-color: #222;
+}
+
+h2 {
+    text-align: center;
+    margin: 0;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+
+form {
+background-color: transparent;
+padding: 20px 0;
+max-width: 500px;
+margin: auto;
+box-shadow: 0px 0px 55px #0009;
+margin-top: 50px; 
+border-radius: 8px;
+}
+
+
+
+.form_input {
+    padding: 6px 20px;
+} 
+
+input, textarea, select {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 6px 12px;
+    border: none;
+    border: 1px solid #999;
+    box-shadow: 0px  0px 15px #0001;
+    background-color: transparent;
+    color:#eee;
+    border-radius: 4px;
+    margin: 10px 0px;
+}
+
+
+option{
+    background-color: #222;
+}
+
+
+
+textarea {
+min-width: 100px;
+min-height: 100px;
+max-height: 200px;
+resize:   vertical;
+}
