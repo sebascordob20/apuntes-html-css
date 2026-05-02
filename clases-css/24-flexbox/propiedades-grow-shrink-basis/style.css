@@ -21,6 +21,7 @@ border: solid 1px black;
      width: 100px;
      order: 2;
      flex-grow: 1;
+     flex-shrink: 1;
 }
 
 
@@ -28,6 +29,7 @@ border: solid 1px black;
 .flex-item:first-child {
     order: 3;
     flex-grow: 1;
+    flex-shrink: 1;
 }
 
 
@@ -43,7 +45,9 @@ Entre mayor sea el número del valor flex-shrink, mas se encojerá el elemento f
     flex-shrink: 2;
 
 
-    flex-basis: 150px; /* Es el width de los flex item. Establece el tamaño base de un flex item*/
+     /* Es el width de los flex item. Establece el tamaño base de un flex item. Esto es lo máxmio que un flex item
+    se puede achicar, antes de encogerse*/
+    flex-basis: 150px;
 }
 
 

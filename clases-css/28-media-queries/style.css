@@ -1,0 +1,29 @@
+.flexbox {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flex-item {
+   background-color: #ccc;
+  border: 1px solid blue;
+  flex-grow: 1;  
+}
+
+
+
+
+@media screen and (max-width: 500px) {
+    .flexbox {
+        flex-direction: column;
+    }
+}
+
+
+
+
+@media print {
+
+    p{
+        color: teal;
+    }
+}

@@ -1,0 +1,21 @@
+/*
+Los atributos srcset y size son 2 aributos de html que trabajan en conjunto para ofrecer una solución 
+mas avanzada y flexible para poder cargar imagenes responsive. Le permiten al navegador que eliga la 
+imagen adecuada seg{un cierta condición dada. Ejemplo de estas condiciones: si la página tiene zoom, 
+si la ventana del navegador llega a cierta cntidad de pixeles. Esto es fundamental para mejorar 
+el rendimiento y load time (tiempo de carga de la página). Ya que el 75% de los casos donde el usuario no recibe
+la carga completa de la página en los primeros 4 segundos, este la abandona.
+*/
+
+
+body {
+    box-sizing: border-box;
+}
+
+
+/* img {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+}
+ */

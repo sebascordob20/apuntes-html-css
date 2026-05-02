@@ -1,0 +1,24 @@
+.grid {
+    display: grid;
+    grid-template-columns:  1fr 1fr 1fr; /* También se puede hacer lo mismo con la función repeat(3  ,1fr)*/ 
+    grid-template-rows: repeat(3,200px);
+    direction: ltr;
+    gap: 20px;
+    /*   */
+}
+
+.grid-item {
+    background-color: #48e;
+    padding: 10px;
+    color: #fff;
+    font-size: 30 px;
+
+}
+
+
+@media screen and
+ (max-width:400px){
+    .grid {
+        grid-template-columns: 1fr;
+    }
+ }

@@ -1,0 +1,18 @@
+body{
+    margin: 0;
+}
+
+
+
+.container {
+    container-type: inline-size;
+    container-name: main;
+}
+
+/*Aplicamos los estilos dentro del container con nombre main, cuando el ancho del dispositivo es igual o menor a 600px*/
+@container main (max-width: 600px) {
+    p {
+        font-size: 20px;
+        color: #f00;
+    }
+}

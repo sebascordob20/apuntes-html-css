@@ -1,0 +1,81 @@
+
+body{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    height: 100vh;
+    margin-bottom: 0;
+    box-sizing: border-box;
+    color: white; 
+
+    background-image: url('/clases-html/04-imagenes/laravel.png');
+/*     background-repeat: no-repeat; */
+    object-fit: fill; 
+}
+
+h1 {
+ margin-top: 0;
+}
+
+
+.navBar {
+    margin-top: 0;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 40px;
+    position: sticky;
+    top: 0;
+}
+
+
+.navBar-items {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    text-decoration: none;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav__link{
+    text-decoration: none;
+    color: #eb2323;
+}
+
+.btn_login{
+    background-color: #eb2323;
+    color: #fff;
+    border-radius: 16px;
+    padding: 10px 20px;
+    transition: border-radius 0.2s, border-color 0.24s;
+}
+
+.btn_login:hover {
+    background-color: #f07d7d;
+    color: #fff;
+    /* border: solid 1px black; */
+    border-radius: 17px;
+
+}
+
+.logo-navBar-layout{
+  width: 130px;
+  height: 65px;   
+}
+
+main{
+    background-color: #e47979;
+    color: #fff;
+}
+
+p{
+    text-align: start;
+    /* word-wrap: break-word; */
+    word-break: break-all;
+    text-wrap: pretty;
+}

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Picture, Source y Media</title>
+</head>
+<body>
+    
+<!-- Se coloca por orden de prioridad dentro de la etiqueta picture, cual queremos que sea la imagen que cargue-->
+    <picture>
+        <source media="(max-width: 400px)" srcset="/clases-html/18-atributos-srcset-sizes/vini-jr-small.jpg">
+        <source media="(max-width: 600px)" srcset="/clases-html/18-atributos-srcset-sizes/vini-jr-medium.jpg">
+        <source srcset="/clases-html/18-atributos-srcset-sizes/vini-jr.webp" type="image/webp">
+        <img src="/clases-html/18-atributos-srcset-sizes/vini-jr.jpg">
+    </picture>
+</body>
+</html>
