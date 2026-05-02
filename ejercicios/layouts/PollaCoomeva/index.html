@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Polla Coomeva</title>
+</head>
+
+<body>
+
+
+    <div class='container-principal-home'>
+        <div class='bannerPricipalPolla'>
+            <!--AquÍ dentro podría ir el swiper de react que contenga cada SwiperSlide como una img o video segun la data que se
+      le pase al componente por medio de las props  -->
+            <Swipper> <!--Este swiper debe tener sus atributos de configuracion para que sea autoplay -->
+                <SwiperSide>
+                    <!-- Aquí podemos aplicar renderizado condicional con react validando si en las props el baner es un video o imagen. Si es una imagen, pinto un contenedor div img, y dentro una etiqueta img. 
+            Si es un video, pinto un contenedor div vid con una etiqueta video hija. El hiperviculo viene en las props para ambos tipo de baner: video e imagen.
+            -->
+                </SwiperSide>
+                </Swiper>
+                <div />
+        </div>
+
+        <div class="navBarPolla">
+            <Nav>
+                <Nav.Link href="/">Polla Mundialista</Nav.Link>
+                <Nav.Link href="/Tabla de Posiciones">Tabla de Posiciones</Nav.Link>
+                <Nav.Link href="/partidos">Partidos</Nav.Link>
+                <Nav.Link href="/Términos y Condiciones">Términos y Condiciones</Nav.Link>
+                <Nav.Link href="/Mis Puntos">Mis Puntos</Nav.Link>
+                <button>Iniciar Sesion</button>
+            </Nav>
+        </div>
+
+        <div class="NavPartidos">
+            <h3>Juega tus Marcadores de la fase de grupos</h3>
+
+            <div class="sliderFaseDeGrupos">
+                <Swiper>
+                    <SwiperSide>
+                        <!-- Se pitan 6 de estas CardPartido (componente reutilizable), con un ciclo, recorriendo la data de la prop.
+                        Esto así, porque son 6 partidos por fase de grupos, y cada slide, debe mostrar,
+                        los 6 partidos por grupo del mundial. 
+                    -->
+
+                        <!-- Yo se que dijiste solo estructura primero y nada de estilos, pero seria buenisimo que cada una de las CardPartido
+                        tenga display flex para cada div de un team o equipo, y ubique cada elemento de la card de forma vertical, es decir de abajo hacia arriba: 
+                        header -> titulo
+                        body -> contenedor img, nombrePais 
+                    -->
+                        <Card>
+                            <div class="card-header">
+                                <span class="badge">Grupo A por ejemplo</span>
+                            </div>
+                            <div class="card-body">
+                                <div class="contenedor-home-team">
+                                    <div class="contenedor-img-flag">
+                                        <img src="viene de las props, tranqui" />
+                                    </div>
+
+                                    <span class="badge">
+                                        Brasil por ejemplo
+                                    </span>
+                                </div>
+
+
+                            </div>
+                        </Card>
+
+                    </SwiperSide>
+
+                </Swiper>
+
+            </div>
+
+        </div>
+    </div>
+
+
+</body>
+
+</html>
