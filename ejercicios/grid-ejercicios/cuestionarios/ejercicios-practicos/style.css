@@ -1,0 +1,38 @@
+
+/*
+
+❓ Preguntas
+
+1. ¿Cuánto medirían idealmente las columnas?
+
+2. ¿Qué columna se ve afectada por el contenido?
+
+3. ¿Qué tipo de overflow ocurre y dónde?
+
+4. ¿Se mantiene el reparto de fr o se rompe?
+
+*/
+
+
+.grid-container3{
+ display: grid;
+border: solid 1px black;
+width: 300px;
+grid-template-columns: 200px repeat(2, 1fr);
+grid-template-rows: repeat(1,150px);
+grid-a
+}
+
+
+.grid-item3{
+margin: 10px;
+border-radius: 8px;
+border: solid 1px black;
+background-color: cornsilk;
+
+}
+
+.grid-item3-desborda{
+    background-color: aqua;
+    min-width: 500px;
+}

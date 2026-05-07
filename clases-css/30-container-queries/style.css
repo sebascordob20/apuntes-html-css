@@ -3,10 +3,16 @@ body{
 }
 
 
+/* 
+Al contenedor div con clase .container,lo definimos como un contenedor de tipo inline-size.
+inline-size solo tiene en cuenta las dimensiones en linea, y size tiene en cuenta las 
+dimensiones inline y block del contenedor. Para este ejemplo en concreto, definiremos el tipo del
+contenido como inline-size, para condicionar los estilos del contenedor según el ancho que tenga.
 
+*/
 .container {
-    container-type: inline-size;
-    container-name: main;
+    container-type: inline-size; /* Con esta propiedad, estamos creando algo llamado un container-context*/
+    container-name: main;   /* Asignandole un nombre al contenedor.  */
 }
 
 /*Aplicamos los estilos dentro del container con nombre main, cuando el ancho del dispositivo es igual o menor a 600px*/
@@ -14,5 +20,6 @@ body{
     p {
         font-size: 20px;
         color: #f00;
+        background-color: dimgray;
     }
 }

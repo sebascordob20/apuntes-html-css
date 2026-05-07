@@ -1,0 +1,43 @@
+
+/* 
+
+Las features queries sirven para evitar que el diseño no se rompa en caso de que una propiedad no sea soportada por 
+el navegador
+
+*/
+
+
+@supports (color: red) {
+    p {
+        color: red;
+    }
+}
+
+@supports not (color: red) {
+    p {
+        color: blue;
+    }
+}
+
+
+/*
+Ejemplo de feature querie con la propiedad display: grid
+*/
+
+@supports (display: grid){
+    body {
+        display: grid;
+        grid-template-columns: 200px;
+        grid-template-rows: 200px;
+    }
+}
+
+@supports not (display: grid){
+    body {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+         align-content: center;
+    }
+}

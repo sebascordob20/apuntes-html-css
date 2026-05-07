@@ -1,24 +1,224 @@
+/*
+
+Conceptos elementales del grid css:
+---------------------------------
+
+
+-Grid Container: es el elemento padre que se define como un contenedor cuadrícula. Ejemplo un div que se asigna display: grid;
+
+-Grid Item: son los elementos hijos directos del contenedor de la cuadrícula. Cada grid item puede ocupar una o mas celdas en la
+ cuadrícula
+
+
+ -Las líneas de las cuadrículas: Se definen como los bordes de la cuadrícula, las cuales sirven para separar las filas y columnas.
+Estas líneas de la cuadrícula se pueden referenciar para colocar elementos en la cuadrícula. Por ejemplo, si queremos posicionar un
+ elementto al inicio, centro o final, va a tener en cuenta esas líneas ---> al principio de la linea, al centro de la linea o 
+ al final de la linea
+
+
+ -Celdas: es la unidad básica donde se pueden colocar los elemntos. Este concepto es diferente de los grid items, que son el elemento
+ html hijo, de un contenedor que tiene display: grid, mientras que una celda en grid, es el espacio real que grid almacena para esa celda
+ puntual en la que se colocará el elemento grid item.
+
+
+ -grid áreas: Son partes del grid, que estan delimitadas por 4 lineas o grid lines. Las grid áreas pueden constar de 1 o mas celdas,
+ y se utilizan para colocar elementos html grid items de forma mas eficiente dentro de la cuadrícula. Ejemplo, un elemento grid item
+ puede ocupar 4 celdas, 3 celdas horizontales, o 3 celdas verticales y 3 celdas horizontales, y todo el espacio delimitado por esa zona
+ que ocupa el grid item, se le considera un grid área.
+
+
+ ----------------------------------------------------------------
+Como se ubican los elementos?
+
+Por defecto, grid ubica los elementos de esta forma:
+[ item1 ][ item2 ]
+[ item3 ][ item4 ]
+
+De izquierda a derecha, y luego bajan.
+
+
+
+ Grid tiene 3 ideas clave:
+
+
+ 1. Dispocisión grid del contenedor:
+
+display:grid;
+
+
+
+2. Estructura filas y columnas:
+
+grid-template-columns:
+grid-template-rows:
+
+
+ 3. posicionamiento y control de elementos grid-items
+grid-column: ;
+grid-row: ;
+gap: ;
+
+
+ejemplo de posicionamiento. Elemento ocupa toda desde la columna 1 a la columna 3 ---> grid-column: 1 / 3 
+
+
+ */
+
+
+
+
+
+
+
 .grid {
     display: grid;
-    grid-template-columns:  1fr 1fr 1fr; /* También se puede hacer lo mismo con la función repeat(3  ,1fr)*/ 
-    grid-template-rows: repeat(3,200px);
-    direction: ltr;
-    gap: 20px;
-    /*   */
+    grid-template-columns: 200px 200px 200px; /*Definiendo 3 columnas de 200 pixeles de ancho cada una*/
+    grid-template-rows: 100px; /*Definiendole altura a todos flex items de la primer fila*/
+    /*Tanto flexbox como grid, manejan la dirección de sus ejes principales, a favor de la dirección del texto*/
+    direction: ltr; /*rtl*/
 }
 
+
+/* 
+En grid, los grid items no colapsan su margin, para este caso, el margin de 2 elementos que esten cerca, no será de 10px
+entre los 2, sino que cada uno tendrá 10px, por lo que será en total 20px. 
+*/
+ 
 .grid-item {
     background-color: #48e;
+    margin: 10px;
     padding: 10px;
     color: #fff;
-    font-size: 30 px;
-
+    font-size: 20px;
+    border: solid 1px black;    
 }
 
 
-@media screen and
- (max-width:400px){
-    .grid {
-        grid-template-columns: 1fr;
-    }
- }
+
+/*
+En CSS Grid, las columnas o filas con auto se ajustan al contenido como tamaño mínimo, pero pueden crecer 
+para ocupar el espacio disponible del contenedor.  El navegador primero asegura que cada track (fila o columna) tenga al menos 
+el tamaño necesario para su contenido, y luego distribuye el espacio restante entre los tracks que pueden crecer 
+(como los que usan auto o fr).
+
+*/
+
+
+/* 
+
+En el siguiente ejemplo .grid-layout:
+
+- La tercera columna siempre mide 200px
+
+- Las dos columnas auto:
+    Se aseguran de que su contenido quepa
+    Luego se expanden para llenar el espacio restante
+    Ese espacio se reparte entre ambas
+    
+*/
+
+
+.grid-layout{
+    display: grid;
+    border: solid 1px black;
+    grid-template-columns: auto auto 200px;
+    grid-template-row: 110px 410px;   
+   /*  max-height: 110px; */
+}
+
+
+.grid-item2{
+    background-color: slateblue;
+    color: #fff;
+    padding: 10px;
+    margin: 15px;
+}
+
+
+
+/* 
+Asignamos 1 fracción de las 6 disponibles a la primer columna del .grid-fracción.
+Asignamos 3 fracciones de las 6 disponibles a la segunda columna del .grid-fracción.
+Asignamos 2 fracciones de las 6 disponbls a la tercer columna del .grid-fracción
+El total de las fracciones disponibles, lo asgina la suma de todas las fracciones definidas a todas las columnas.
+
+Este mismo comportamiento de la unidad de freacción aplica para las filas de un container grid. Ejemplo:
+
+ grid-template-columns: 1fr 3fr 2fr; 
+*/
+
+
+/*
+Si quisieramos generar  4 columnas que tuvieran como valor mínimo 100px, y como valor máximo 300px, podriamos asignarle esto
+a nuestro grid-template-columns: repeat(4, minmax(100px, 300px));
+
+La misma lógica la podríamos aplicar con las rows o filas de nuestra grilla.
+
+*/
+
+
+/*
+===== Ejemplo columnas responsives: ======
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+Con esto, le estamos diciendo al navegador que: 
+el ancho mínimo de las columnas es 200px.
+
+El 1fr, indica que se tomará 1 parte del total del espacio para la  columna.
+
+El auto-fit, calcula auotmaticamente según la resolución de pantalla en la que esté,
+cuantas columnas tendrían como mínimo 200px
+
+De forma un poco mas clara, esa asignación de grid-template-columns se vería así:
+100 / 200 = 5;
+5 equivale al total de fracciones o partes del espacio total para las columnas.
+Como indicamos fr, entonces deben medir lo mismo como mínimo, lo cual es 200px,
+y si sobra espacio, repartirlo de forma equitativa en las 5 partes.
+
+
+auto-fit SOLO TRABAJA y AFECTA a grid-template-colums.
+
+*/
+
+
+
+
+
+
+/*
+===== FUNCIONES USADAS EN GRID ====
+
+min-content → lo más pequeño posible sin romper contenido
+max-content → lo más grande posible sin hacer wrap
+
+repeat(2, 1fr)
+
+minmax(0, 1fr)
+
+auto-fill vs auto-fit
+
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));  → Para layouts responsive reales:
+
+*/
+
+
+
+.grid-fraccion {
+    display: grid;
+    margin-top: 10px;
+    background-color: thistle;
+    border-radius: 16px;
+    border: solid 1px black;
+    grid-template-rows: repeat(3, minmax(200px, 300px));
+    grid-template-columns: repeat(2, 200px);
+   /* grid-template-columns: 1fr 3fr 2fr; */ /*podemos reducir este valor con un repeat(1, 1fr 3fr 2fr)*/
+    
+}
+
+.grid-item-fraccion {
+    background-color: salmon;
+    padding: 15px;
+    margin: 15px;
+    border: solid 1px black;
+    border-radius: 10px;
+}

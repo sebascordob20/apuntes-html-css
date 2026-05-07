@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css ">
+    <title>cuestionario intermedio html y css</title>
+</head>
+<body>
+
+    La etiqueta section sirve para separa un bloque o sección de nuestra página.
+La usuería para envolver componentes complejos como barras de navegación, navBars collapse,
+una sección de artículos, un slider, un carrousel, un banner, etc. Mientras que
+la etiqueta article tiene un signifcado mas semántico, haciendo refernecia 
+a que el contenido dentro de ella, corresponde a un artículo dentro 
+de nuestra página web.
+
+
+
+2. 
+El problema que resuelve label, es indicarle al usuario, por medio
+de un texto, que información debe ir en el input correspondiente del formulario.
+Con su propiedad for permite que el usuario pueda clickear sobre el label,
+y que este active el foco en el input que se relaciona.
+
+
+3. 
+El estilo que gana porque tiene mas especificidad, es el id: #title
+
+
+
+
+4.
+La posición relative permite que un contenedor o elemento padre, pueda
+posicionar en el mismo lugar sus elementos hijos fijos o absolutos dentro de el,
+sin importar la posición en el eje principal o cruzado en el que el contenedor
+se encuentre posicionado en relación con su componente padre.
+
+
+4.
+position: absolute;  ---> define que un elemento siempre este ubicado en la 
+misma posición del dom, permitiendose crecer, tener ancho, tener alto, tener top, botton,
+left, right, todo partiendo desde su posición absoluta.
+
+position: fixed;  ---> define que un elemento siempre estará fijo y ubicado en la posición que se le indica
+sin permitirle crecer, tener ancho, tener alto, ni moverse hacia algun lado por mas que se le indica con propiedades css.
+
+
+position: sticky; ----> tiene la capacidad de que un elemento quede pegado en el lugar donde se le defina, evitando que
+ un scroll lo mueva o oculte de la visual de la página. Es muy usado para crear componentes que deben permanecer visibles para 
+ el usuario en todo momento como headers, barras de navegación, footers, botones o mrenus flotantes. Se combina muchísimo con
+la propiedad top: 0; y la propiedad z-index: ;
+
+
+
+6:
+Esos selectores definen: un contenedor div con la clase .container como caja flexible.
+Y asigna el elemento con clase .item como primer item flexible de ese contenedor. El que primero se organizará en el contenedor. 
+
+
+7: 
+Resuelve el problema que se presenta en un contenedor cuando parte del contenido se sale de los límites que este tiene.
+Overflow oculta esa parte que se sale evitando que el contenedor se rompa.
+
+8: z-index le da mayor visibilidad a un elemento sobre otro u otros. Entre mas z-index tiene un elemento, mas por encima
+lo pondrá el navegador para que visualmente quede por delante de uno o varios elementos. Es como si los elementos estuvieran
+en un nivel de capas, entonces el que mas cantidad de z-index tiene, mayor es el nivel de capas que se posiciona hacia afuera, logrando
+mayor visibilidad para el usuario. 
+
+<div class="box">
+
+</div>
+
+</body>
+</html>
+
+
+
+Evaluación de:
+
+- Selectores avanzados
+- Especificidad
+- Posicionamiento
+- Flexbox real (no superficial)
+- Flujo del documento
+
+
+1. 
+
+Diferencia entre:
+<section>
+<article>
+
+La etiqueta section sirve para separa un bloque o sección de nuestra página.
+La usuería para envolver componentes complejos como barras de navegación, navBars collapse,
+una sección de artículos, un slider, un carrousel, un banner, etc. Mientras que
+la etiqueta article tiene un signifcado mas semántico, haciendo refernecia 
+a que el contenido dentro de ella, corresponde a un artículo dentro 
+de nuestra página web.
+
+
+
+2. 
+El problema que resuelve label, es indicarle al usuario, por medio
+de un texto, que información debe ir en el input correspondiente del formulario.
+Con su propiedad for permite que el usuario pueda clickear sobre el label,
+y que este active el foco en el input que se relaciona.
+
+
+3. 
+El estilo que gana porque tiene mas especificidad, es el id: #title
+
+
+
+
+4.
+La posición relative permite que un contenedor o elemento padre, pueda
+posicionar en el mismo lugar sus elementos hijos fijos o absolutos dentro de el,
+sin importar la posición en el eje principal o cruzado en el que el contenedor
+se encuentre posicionado en relación con su componente padre.
+
+
+4.
+position: absolute;  ---> define que un elemento siempre este ubicado en la 
+misma posición del dom, permitiendose crecer, tener ancho, tener alto, tener top, botton,
+left, right, todo partiendo desde su posición absoluta.
+
+position: fixed;  ---> define que un elemento siempre estará fijo y ubicado en la posición que se le indica
+sin permitirle crecer, tener ancho, tener alto, ni moverse hacia algun lado por mas que se le indica con propiedades css.
+
+
+position: sticky; ----> tiene la capacidad de que un elemento quede pegado en el lugar donde se le defina, evitando que
+ un scroll lo mueva o oculte de la visual de la página. Es muy usado para crear componentes que deben permanecer visibles para 
+ el usuario en todo momento como headers, barras de navegación, footers, botones o mrenus flotantes. Se combina muchísimo con
+la propiedad top: 0; y la propiedad z-index: ;
+
+
+
+6.
+Esos selectores definen: un contenedor div con la clase .container como caja flexible.
+Y asigna el elemento con clase .item como primer item flexible de ese contenedor. El que primero se organizará en el contenedor. 
+
+
+7. 
+Resuelve el problema que se presenta en un contenedor cuando parte del contenido se sale de los límites que este tiene.
+Overflow oculta esa parte que se sale evitando que el contenedor se rompa.
+
+8.
+ z-index le da mayor visibilidad a un elemento sobre otro u otros. Entre mas z-index tiene un elemento, mas por encima
+lo pondrá el navegador para que visualmente quede por delante de uno o varios elementos. Es como si los elementos estuvieran
+en un nivel de capas, entonces el que mas cantidad de z-index tiene, mayor es el nivel de capas que se posiciona hacia afuera, logrando
+mayor visibilidad para el usuario.  Y realmente no sabría en que momento la propiedad z-index no funciona, eso podrías explicarmelo.
+
+
+9.
+
+A mi criterio, así dejaría siempre en la parte inferior, el contenedor .box:
+.box{
+    width: 200px;
+    height: 250px;
+    background-color: slateblue;
+    border: solid 1px black;
+
+    left: 100%;
+    top: 100%;
+    position: sticky;
+}
+
+
+
+
+10.
+Yo lo que haría para resolver de una forma sencilla es:
+- que el contenedor tenga un display:flex;
+
+-Definirle un flex-direction: row;
+- Definirle un justify-content: space-between; para que siempre me pegue a los extremos
+el elmento primer y útlimo flex-item, y los elementos alrededor de estos se centren.
+
+
+

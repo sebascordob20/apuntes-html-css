@@ -1,0 +1,118 @@
+1. b)
+
+2. La etiqueta div es un contenedor que tiene disposicion de bloque por defecto. Mientras que la etiqueta
+span tiene display inline por defecto. La primera sirve para tener elementos hijos dentro de el, la segunda
+etiqueta sirve para definir un texto en algún apartado de nuestra página.
+
+3. El atributo alt de la etiqueta img, sirve para accesibilidad, logrando dar una descripción puntual
+    de lo que trata la imagen. Es fundamental definirla para el uso de tecnologías asistivas.
+
+4. Estructura correcta de un html básico: 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Estructura básica html</title>
+</head>
+<body>
+    <header>
+
+    </header>
+
+    <nav></nav>
+
+    <main>
+
+    </main>
+    <aside>
+        <article>
+            <section>
+
+            </section>
+            
+            <section>
+
+            </section>
+        </article>
+    </aside>
+
+    <footer>
+
+    </footer>
+</body>
+</html>
+
+
+5. 
+
+Para un título principal usaría --> <h1>Mi título principal</h1>
+Para una lista ordenada haría esto -->
+    <ol class="listado-tecnologias">
+        <li class="item-herramienta">html</li>
+        <li class="item-herramienta">css</li>
+        <li class="item-herramienta">javascript</li>
+        <li class="item-herramienta">react</li>
+        <li class="item-herramienta">php</li>
+    </ol>
+
+
+Para un enlace, definiría un anchor ----> <a href="https://laravel.com/">Ir al sitio oficial del framework número 1 de php</a>
+
+
+
+6. la propiedad display define el tipo de dispocisión de un elemento a nivel de layout. Con esta propiedad,
+un elemento puede ocupar toda una linea para el, tener elementos hijos flexibles entre otros.
+
+
+7. Margin sirve para dar espaciado entre otras cajas al mismo nivel de una caja con margen. Padding sirve para dar espaciado entre el contenido de
+    un elemento y sus bordes extremos.
+
+8. 
+seleccionar un id --> #'nombre-id'{
+
+}
+seleccionar una clase ---> .'nombre-clase'{
+
+}
+seleccionar todos los elemento p de mi página ---> p {
+
+}
+
+
+9. Ese selector, le da un ancho de 100px y un padding de 20px arriba, derecha, abajo e izquierda de un elemento html el cual se le
+definió una clase box. Es muy probable que estemos hablando de un contenedor div.
+
+El tamaño total del ancho son 120px, ya que no le hemos definido explicitamente un box-sizing: border-box, que le dice al contenedor que el total
+de su ancho siempre sea el que defina la propiedad width, sin importar lo que pueda añadir, el padding, margin, o tamaño de fuente por ejemplo.
+
+
+10. El modelo caja den css, es la definición de contenedores, basandose en 4 propiedades elementales: el padding, el margin, el content y el border
+ de un contenedor.
+
+
+11. para centrar ese parráfo dentro del div con clase container, yo haría esto --->
+
+<div class="container">
+  <p>Hola</p>
+</div>
+<!-- 
+styles:
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+} -->
+
+12. 
+display: block; ---> define que un elemento será tratado como bloque,permitiendo que pueda crecer en alto, ancho, y ocupando su linea
+o espacio horizontal solo para el.
+
+display: inline;   ---> define que un elemento será tratato en 1 linea, podrá compartir espacio a los lados con otro elemento inline,
+y no tendrá la capacidad de asignarsele un alto o ancho defninido.
+
+display: inline-block;   ---> esto le permitirá a un elemento ser tratado inline, pero permitiendole definir un alto y ancho definido.

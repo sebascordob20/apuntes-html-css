@@ -45,7 +45,7 @@ Entre mayor sea el número del valor flex-shrink, mas se encojerá el elemento f
     flex-shrink: 2;
 
 
-     /* Es el width de los flex item. Establece el tamaño base de un flex item. Esto es lo máxmio que un flex item
+     /* Es el width de los flex item. Establece el tamaño base de un flex item. Esto es lo máximo que un flex item
     se puede achicar, antes de encogerse*/
     flex-basis: 150px;
 }
