@@ -1,0 +1,18 @@
+.grid-alineacion{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(150px, 1fr));
+    gap: 2px;
+    justify-items: center; /*Justifica cada grid-item en el eje horizontal, dentro de su propia celda. (lo mueve horizontalmente en su celda)*/
+    justify-content: center; /*Con esta propiedad, no movemos el grid-item, movemos la celda completa en el eje horizontal*/
+}
+
+
+.grid-item-alienacion{
+    background-color: #48e;
+    color: #fff;
+    text-align: center;
+    width: 150px;
+    min-height: 150px;
+    border-radius: 16px;
+    align-items: center; /*alinea los items del elemento*/
+ }

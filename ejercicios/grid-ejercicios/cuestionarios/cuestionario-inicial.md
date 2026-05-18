@@ -153,7 +153,7 @@ Implementar una galeria de fotos aplicando correctamente auto-fill y atuo-fit
     grid-row-start
     grid-row-end
 
-    grid-column
+    grid-columnsss
     grid-column-start
     grid-column-end
  
@@ -185,3 +185,13 @@ Grid dentro de Flexbox (y viceversa)
 
 
  - vale. Sigueme poniendo mas ejercicios. La idea es practicar, practicar y practicar hasta que me vuelva un crack. Vamos a ir desde casos puntuales para entender el concepto, sin importar como se vea el diseño y luego haremos un ejercicios avanzados implementando layouts de aplicaciones web reales.
+
+
+---------------------
+Terminar ejercicio del holy-grail-design del grid-area 
+
+
+- Pedir explicación paso a paso del concepto grid-direction o dirección en grid-
+
+- Pedir explicación del concepto subgrid
+

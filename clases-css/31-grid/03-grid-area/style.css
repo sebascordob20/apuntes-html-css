@@ -1,52 +1,11 @@
-/* .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(100px, 150px));
-    grid-template-rows: repeat(3,200px);
-    grid-auto-rows: 150px;
-    grid-auto-flow: row;
-    /* grid-auto-flow: dense; ---> investigar */
-    
-    
-   /*  
-    grid-auto-columns: 1fr;
-    margin: auto;
-    margin-top: 30px;
-    gap: 20px;
-    min-height: 100vh;
-} */
-
-
-/* 
-.grid-item{
-    background-color: #48e;
-    font-size: 30px;
-    border-radius: 16px;
-    background-image: url('/clases-html/04-imagenes/laravel.png');
-    background-size: cover;
-    background-position: center;
-    padding: 10px;
-    font-size: 30px;
-    color: #fff;
-}
-
-
-.grid-item:nt-child(10){
-    grid-area: span;
-} */
-
-
-
-body {
+.grid-body {
     display: grid;
     grid-template-columns: repeat(3,minmax(150px,1fr));
     grid-template-rows: auto 1fr auto;
     grid-auto-flow: dense;
     min-height: 100vh;
-    grid-template-areas: 
-    'HEADER HEADER HEADER' 
-    'NAV MAIN ASIDE'
-    'FOOTER  FOOTER FOOTER';
-   /*  grid-auto- */
+    grid-template-areas:  
+    'NAV MAIN ASIDE';    /*  grid-auto- */
 
 }
 
@@ -58,7 +17,9 @@ header, nav, main, aside, footer {
 
 
 header{
-    grid-area: HEADER;
+width: 100vw;
+background-color: #48e;
+
 }
 
 nav {
@@ -76,5 +37,8 @@ aside {
 }
 
 footer{
-    grid-area: FOOTER;
+    width: 100vw;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
 }
