@@ -16,9 +16,9 @@ Estas líneas de la cuadrícula se pueden referenciar para colocar elementos en 
  al final de la linea
 
 
- -Celdas: es la unidad básica donde se pueden colocar los elemntos. Este concepto es diferente de los grid items, que son el elemento
- html hijo, de un contenedor que tiene display: grid, mientras que una celda en grid, es el espacio real que grid almacena para esa celda
- puntual en la que se colocará el elemento grid item.
+ -Celdas: es la unidad básica donde se pueden colocar los elementos. Este concepto es diferente de los grid items, que son el elemento
+ html hijo de un contenedor que tiene display: grid, mientras que una celda en grid, es el espacio real que grid almacena para ubicar
+el elemento grid-item.
 
 
  -grid áreas: Son partes del grid, que estan delimitadas por 4 lineas o grid lines. Las grid áreas pueden constar de 1 o mas celdas,

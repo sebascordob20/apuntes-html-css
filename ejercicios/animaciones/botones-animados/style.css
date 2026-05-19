@@ -1,0 +1,25 @@
+body {
+    margin: 0;
+    background-color: #222;
+}
+
+
+.wrapper {
+    display: flex;
+    flex-flow: column nowrap;
+    height: 80vh;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.btn {
+    padding: 10px 40px;
+    background-color: transparent;
+    color: #fff;
+    border-radius: 6px;
+    letter-spacing: 3px;
+}
+
+.btn-1 {
+    border: 1 solid #48e;
+}

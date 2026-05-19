@@ -1,5 +1,6 @@
 *{
     box-sizing: border-box;
+    scroll-behavior: smooth; /* Permite generar un scroll pausado en toda la página */
 }
 
 
@@ -64,11 +65,11 @@ Un elemento con position: fixed o absolute puede ser “estirado” usando offse
 
     position: fixed; /* Para que el nav del header se posicione respecto al viewport */
     inset: 0; /* Equivale a: right=0, leght=0, top=0, botton=0 */
-    z-index:100;
+    z-index:150;
     justify-content:center;
     align-items:center;
-
     display:none;
+    background-color: #fff;
 }
 
 
@@ -121,6 +122,7 @@ el selector a definir es un elemento hermano del chekcbox
 .profile{
     container-name: profile;
     container-type: inline-size;
+    animation: aparecer 3s -.6s;
 }
 
 
@@ -219,7 +221,138 @@ el selector a definir es un elemento hermano del chekcbox
 ------ Portfolio section: mobile ------------
 */
 
+.portfolio{
+    background-color: #18233f;
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    container-name: portfolio;
+    container-type: inline-size;
+}
 
+.portfolio-title{
+    font-size: 3rem;
+}
+
+
+.portfolio__project-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 1300px;
+    width: 100%;
+    margin: auto;
+    gap: 12px;
+    padding: 12px;
+    min-height: 90vh;
+}
+
+.portfolio__project{
+  /*   margin: 8px; */
+background-image: linear-gradient(#0009, #0009), url('../img/luchito.jpg');
+background-position: center;
+background-size: cover;
+place-content: center;
+border-radius: 16px;
+
+animation: aparecer both;
+animation-timeline: view();
+animation-range: cover 10% cover 50%
+}
+
+.portfolio_project:hover {
+    opacity: 0.74;
+    outline: 2px solid #fff6;
+}
+
+
+
+/*
+------ Formulario de contacto: mobile ------------
+*/
+
+.form {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    container-type: inline-size;
+    container-name: formulario_contacto;
+
+
+    animation: aparecer both;
+    animation-timeline: view();
+    animation-range: cover 20% contain 50%
+}
+
+
+.form .form__form {
+    max-width: 600px;
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+
+.form__input-container{
+    display: flex;
+    flex-flow: column wrap;
+    width: 100%;
+}
+
+
+.form__input-container input,
+.form__input-container textarea
+{
+width: 100%;
+padding: 9px 6px;
+font-size: 16px;
+margin: 4px;
+border: none;
+box-shadow: 2px, 2px, 4px, #0003;
+}
+
+
+
+
+.form__input-container textarea{
+    resize: none;
+    min-height: 120px;
+    font-family: inherit;
+}
+
+
+#btn-enviar{
+    width: 100%;
+    border: none;
+    padding: 12px;
+    background-color: #48e;
+    color: #fff;
+
+}
+
+
+
+/*
+---- footer: mobile ----
+*/
+
+.footer-section{
+    background-color: #18233f;
+    color: #fff;
+    text-align: center;
+    font-size: 1rem;
+}
+
+
+.footer-section a{
+    color: #fff;
+}
 
 
 
@@ -239,7 +372,19 @@ el selector a definir es un elemento hermano del chekcbox
   } */
 
 .label-open-menu {
+    z-index: 0 !important;
     display: none !important;
+}
+
+
+
+.header{
+ padding: 20px 0;
+ animation: header-movement both;
+ animation-timeline: scroll();
+ position: sticky;
+ top: 0;
+ animation-range: 10px 100px;
 }
 
 
@@ -248,11 +393,17 @@ el selector a definir es un elemento hermano del chekcbox
     position: static !important; /* Para que el nav del header se posicione respecto al viewport */
     inset: none !important; /* Equivale a: right=0, leght=0, top=0, botton=0 */
     z-index: none;
-    
+    background-color: transparent;
     display: flex !important;
     flex-flow: row nowrap;
     justify-content:center !important;
     align-items:center;
+}
+
+
+.nav-item-link a {
+    color: inherit;
+    text-decoration: none;
 }
 
 
@@ -335,3 +486,74 @@ h1{
 }
 
 
+/*
+-------- Portfolio section: Desktop --------
+*/
+
+@container portfolio (min-width: 56.25rem) {
+    .portfolio__project-container {
+    display: grid;
+    /* grid-template-columns: repeat(2,2fr); */
+    grid-template-columns: repeat(auto-fill,minmax(420px, 1fr));
+    /* grid-template-rows: repeat(3);
+    max-width: 1300px;
+    width: 100%;
+    margin: auto;
+    gap: 12px;
+    padding: 12px;
+    min-height: 90vh; */
+    }
+
+    .portfolio__project:first-child{
+        grid-column: span 2;
+    }
+    
+    .portfolio__project:nth-child(6){
+        grid-column: span 2;
+    }
+}
+
+
+
+/*
+
+----- Formulario de contacto: Desktop ------
+
+*/
+@container formulario_contacto (min-width: 56.25rem) {
+
+
+}
+
+
+
+
+/*
+--- Animaciones ---
+*/
+
+@keyframes header-movement {
+    from {
+        padding: 20px 0;
+        background-color: #fff;
+    }
+
+    to {
+        padding: 0;
+        background-color: #10163266;
+        color: #fff;
+    }
+}
+
+
+
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+    }
+
+    to {
+         opacity: 1;
+    }
+}
