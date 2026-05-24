@@ -142,9 +142,11 @@ grid-auto-flow
  
 
 
-- Explicame el funcionamiento de auto-fill y auto-fit, hacen lo mismo? como se usa de manera profesiona y util?
+- Explicame el funcionamiento de auto-fill y auto-fit, hacen lo mismo? como se usa de manera profesional y util?
 
 
+
+Ejercicio de práctica:
 Implementar una galeria de fotos aplicando correctamente auto-fill y atuo-fit
  
  
@@ -180,7 +182,7 @@ con grid-area
 Luego revisemos esto que quedó pendiente:
 Items que ocupan múltiples columnas (span)
 min-content / max-content en conflictos reales
-Grid dentro de Flexbox (y viceversa)
+Grid dentro de Flexbox y viceversa, Flexbox dentro de grid.
 
 
 
@@ -195,3 +197,13 @@ Terminar ejercicio del holy-grail-design del grid-area
 
 - Pedir explicación del concepto subgrid
 
+
+
+
+-------- sigiente prompt: funciones clamp y calc -------
+Explicame el uso de variables en css. 
+Como defino variables que llevan parametros.
+
+Explicame el funcionamiento de la función clamp, la función calc, y como podemos usarlas 
+en diseños reales de forma correcta y profesional. Puedo meter una función dentro de otra? Hazme ejercicios
+hasta mas no poder. 
