@@ -9,29 +9,169 @@ body, div, ul, li, a, h1, h2, h3, h4 {
 }
 
 
+label, .sidebar__nav {
+    user-select: none;
+}
 
 body{
     /*Definiendo variables para los colores de mi pagina */
-
     --bg-color: color-mix(in srgb, #f62 70%, #fff);
     --sidebar-color: #fff;
     --dark-color: #f62;
+    --text-color: #333;
     background-color: var(--bg-color);
+    font-family: Montserat;
 }
 
-
-.sidebar {
-    background-color: var(--sidebar-color);
-    width: auto;
-}
 
 /* SIDEBAR styles */ 
-.item-sidebar{
+.sidebar {
+   background-color: var(--sidebar-color);
+   position: fixed;
+   height: 100dvh;
+   width: clamp(220px, 20vw, 300px);
+   font-size: clamp(1rem, 2.2vw, 3rem);
+
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   padding: 20px 0 30px 6px;
+}
+
+
+.sidebar__nav {
+    flex: 1;
+    display: flex;
+}
+ 
+
+
+ 
+.sidebar__nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+
+.sidebar__item {
     list-style: none;
     display: flex;
     align-items: center;
     text-transform: uppercase;
+
     font-size: .9rem;
     padding-right: 6px;
     color: var(--dark-color);
+    border-radius: 36px 0 0 36px;
+}
+
+
+.sidebar__item a{
+    color: inherit;
+    text-decoration: none;
+}
+
+
+.sidebar__item:hover{
+    background-color: var(--bg-color);
+    color: var(--sidebar-color);
+}
+
+
+.sidebar__item:hover::before,
+.sidebar__item:hover::af{
+    background-color: var(--bg-color);
+    color: var(--sidebar-color);
+}
+
+.sidebar__picture img {
+    width: clamp(4rem, 75%, 20rem);
+    margin: auto;
+    opacity: .82;
+    filter: hue-rotate(-22deg);
+}
+
+
+.sidebar__item img {
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+}
+
+.sidebar_profile img {
+    border-radius: 50%;
+    width: 2rem;
+}
+
+.profile-option {
+    font-size: .9rem;
+    color: var(--text-color) !important;
+    width: 2rem;
+
+}
+
+
+input[type='checkbox'] {
+    display: none;
+}
+
+.sidebar__form {
+    position: absolute;
+    z-index: 20;
+    row-gap: -1rem;
+}
+
+
+.sidebar label {
+    position: relative;
+    background-color: var(--bg-color);
+    color: var(--sidebar-color);
+    font-size: 1rem;
+    border-radius: 50%;
+    padding: .5rem;
+    user-select: none;
+}
+
+
+
+input[type='checkbox']:checked ~ label {
+    color: var(--bg-color);
+    background-color: var(--sidebar-color);
+}
+
+
+input[type='checkbox']:checked ~ label::after,
+input[type='checkbox']:checked ~ label::before {
+    display: none;
+}
+
+
+/* 
+Si el sidebar tiene un elemento input de tipo checkbox chequeado,  aplicamos un estilo específico: 
+*/
+.sidebar:has(input[type='checkbox']:checked) {
+    width: fit-content;
+}
+
+
+
+.sidebar:has(input[type='checkbox']:checked)  .sidebar__picture img{
+    max-width: 3.4rem;
+}
+
+
+.sidebar:has(input[type='checkbox']:checked)  .sidebar__picture{
+    margin-left: 0;
+}
+
+.sidebar:has(input[type='checkbox']:checked) picture{
+    width: fit-content;
+    margin-left: .75rem;
+}
+
+
+.sidebar:has(input[type="checkbox"]:checked) :is(.sidebar__item a, .profile-option) {
+    display: none;
 }

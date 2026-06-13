@@ -1,0 +1,22 @@
+* {
+    box-sizing: border-box;
+}
+
+
+
+body,div,ul,li,a,h1,h2,h3,h4, p{
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+        /*Definiendo variables para los colores de mi pagina */
+    --bg-color: color-mix(in srgb, #f62 70%, #fff);
+    --chat-bg-color: #fff;
+    --dark-color: #f62;
+    --text-color: #444;
+    font-family: Montserat;
+
+    background-color: var(--bg-color);
+}
